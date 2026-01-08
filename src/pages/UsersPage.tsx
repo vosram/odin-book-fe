@@ -53,10 +53,10 @@ function UsersPage() {
                 return <UserCard user={user} key={user.id} />;
               })}
           </div>
-          <div className="my-8 flex justify-center p-4">
+          <div className="my-8 flex justify-center gap-2 p-4">
             {pagesArr.map((num) => (
               <button
-                className="min-h-8 min-w-8 rounded-lg bg-violet-400 text-mobp font-medium text-zinc-50 lg:text-deskp lg:font-medium"
+                className={`min-h-8 min-w-8 rounded-lg text-mobp font-medium lg:text-deskp lg:font-medium ${page == num ? "bg-violet-400 text-zinc-50" : "bg-zinc-700 text-zinc-50"}`}
                 onClick={() => setPage(num)}
                 key={num}
               >
