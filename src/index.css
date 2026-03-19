@@ -1,8 +1,59 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@layer base {
-  :root {
-    --radius: 0.5rem;
-  }
+@import "tailwindcss";
+
+@theme {
+  --text-deskh1: 3.375rem;
+  --text-deskh1--line-height: 110%;
+  --text-deskh1--font-weight: 700;
+  --text-deskh2: 2.8125rem;
+  --text-deskh2--line-height: 110%;
+  --text-deskh2--font-weight: 700;
+  --text-deskh3: 2.3125rem;
+  --text-deskh3--line-height: 110%;
+  --text-deskh3--font-weight: 700;
+  --text-deskh4: 1.9375rem;
+  --text-deskh4--line-height: 110%;
+  --text-deskh4--font-weight: 700;
+  --text-deskh5: 1.625rem;
+  --text-deskh5--line-height: 110%;
+  --text-deskh5--font-weight: 700;
+  --text-deskh6: 1.375rem;
+  --text-deskh6--line-height: 110%;
+  --text-deskh6--font-weight: 700;
+  --text-deskp: 1.125rem;
+  --text-deskp--line-height: 150%;
+  --text-deskp--font-weight: 400;
+  --text-desksmp: 0.9375rem;
+  --text-desksmp--line-height: 150%;
+  --text-desksmp--font-weight: 400;
+  --text-deskxsp: 0.8125rem;
+  --text-deskxsp--line-height: 150%;
+  --text-deskxsp--font-weight: 400;
+  /* Mobile styles */
+  --text-mobh1: 2.25rem;
+  --text-mobh1--line-height: 110%;
+  --text-mobh1--font-weight: 700;
+  --text-mobh2: 2rem;
+  --text-mobh2--line-height: 110%;
+  --text-mobh2--font-weight: 700;
+  --text-mobh3: 1.8125rem;
+  --text-mobh3--line-height: 110%;
+  --text-mobh3--font-weight: 700;
+  --text-mobh4: 1.625rem;
+  --text-mobh4--line-height: 110%;
+  --text-mobh4--font-weight: 700;
+  --text-mobh5: 1.4375rem;
+  --text-mobh5--line-height: 110%;
+  --text-mobh5--font-weight: 700;
+  --text-mobh6: 1.25rem;
+  --text-mobh6--line-height: 110%;
+  --text-mobh6--font-weight: 700;
+  --text-mobp: 1.125rem;
+  --text-mobp--line-height: 150%;
+  --text-mobp--font-weight: 400;
+  --text-mobsmp: 1rem;
+  --text-mobsmp--line-height: 150%;
+  --text-mobsmp--font-weight: 400;
+  --text-mobxsp: 0.875rem;
+  --text-mobxsp--line-height: 150%;
+  --text-mobxsp--font-weight: 400;
 }
