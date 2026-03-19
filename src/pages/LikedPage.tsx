@@ -44,9 +44,9 @@ function LikedPage() {
   return (
     <AuthLayout>
       <div className="min-h-[calc(100vh-72px)] bg-zinc-900 text-zinc-50">
-        <div className="mx-auto max-w-lg gap-4 px-4 py-8 lg:relative">
+        <div className="mx-auto grid max-w-7xl gap-8 px-4 py-8 lg:relative lg:grid-cols-7">
           <SidebarNav />
-          <div className="mx-auto mb-12 flex flex-col gap-6">
+          <div className="mx-auto mb-12 flex flex-col gap-6 lg:col-span-3 lg:col-start-3">
             <div className="flex gap-4">
               <Button
                 variant="outline"

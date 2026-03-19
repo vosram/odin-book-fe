@@ -7,8 +7,8 @@ import { MdOutlineExplore } from "react-icons/md";
 
 function SidebarNav() {
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-10 flex h-min flex-col gap-20 rounded-t-xl bg-zinc-800/50 px-4 py-4 backdrop-blur-md lg:left-[max(0px,calc(50%-37rem))] lg:right-auto lg:top-28 lg:w-64 lg:bg-zinc-800 lg:py-6 lg:backdrop-blur-none">
-      <div className="flex justify-between lg:flex-col lg:gap-3">
+    <div className="fixed right-0 bottom-0 left-0 z-10 flex h-min flex-col gap-20 rounded-t-xl bg-zinc-800/50 px-4 py-4 backdrop-blur-md lg:sticky lg:top-28 lg:right-auto lg:col-span-2 lg:col-start-1 lg:w-full lg:max-w-2xs lg:bg-zinc-800 lg:py-6 lg:backdrop-blur-none">
+      <div className="flex justify-between lg:w-full lg:flex-col lg:gap-3">
         <NavLink
           to="/feed"
           className={({ isActive }) =>
@@ -20,7 +20,7 @@ function SidebarNav() {
           {({ isActive }) => (
             <>
               <p
-                className={`hidden text-mobh6 lg:block lg:text-deskh6 ${
+                className={`text-mobh6 lg:text-deskh6 hidden lg:block ${
                   isActive ? "text-zinc-800" : "text-zinc-50"
                 }`}
               >
@@ -45,7 +45,7 @@ function SidebarNav() {
           {({ isActive }) => (
             <>
               <p
-                className={`hidden text-mobh6 lg:block lg:text-deskh6 ${
+                className={`text-mobh6 lg:text-deskh6 hidden lg:block ${
                   isActive ? "text-zinc-800" : "text-zinc-50"
                 }`}
               >
@@ -89,7 +89,7 @@ function SidebarNav() {
           {({ isActive }) => (
             <>
               <p
-                className={`hidden text-mobh6 lg:block lg:text-deskh6 ${
+                className={`text-mobh6 lg:text-deskh6 hidden lg:block ${
                   isActive ? "text-zinc-800" : "text-zinc-50"
                 }`}
               >
@@ -114,7 +114,7 @@ function SidebarNav() {
           {({ isActive }) => (
             <>
               <p
-                className={`hidden text-mobh6 lg:block lg:text-deskh6 ${
+                className={`text-mobh6 lg:text-deskh6 hidden lg:block ${
                   isActive ? "text-zinc-800" : "text-zinc-50"
                 }`}
               >
@@ -133,7 +133,7 @@ function SidebarNav() {
         to="/posts/create"
         className="hidden items-center justify-between rounded-lg bg-violet-400 px-4 py-3 lg:flex"
       >
-        <p className="text-mobh6 text-violet-950 lg:text-deskh6">Create Post</p>
+        <p className="text-mobh6 lg:text-deskh6 text-violet-950">Create Post</p>
         <IoMdAddCircleOutline className="h-8 w-8 fill-violet-950" />
       </NavLink>
     </div>

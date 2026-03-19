@@ -31,38 +31,40 @@ function UsersPage() {
   return (
     <AuthLayout>
       <div className="min-h-[calc(100vh-72px)] bg-zinc-900">
-        <div className="pb-32 pt-14">
+        <div className="grid max-w-7xl gap-8 px-4 pt-14 pb-32 lg:grid-cols-7">
           <SidebarNav />
-          <div className="mb-6 px-4">
-            {/* search component here */}
-            <div className="mx-auto flex max-w-72 items-center gap-3 rounded-lg border border-zinc-700 bg-zinc-800 pr-4">
-              <Input
-                type="text"
-                className="border-0 bg-zinc-800 text-zinc-50"
-                placeholder="Search by Username"
-                onChange={(e) => debouncedSetKeyword(e.target.value)}
-              />
-              <FaSearch className="h-4 w-4 fill-zinc-50" />
+          <div className="lg:col-span-4 lg:col-start-3">
+            <div className="mb-6 px-4">
+              {/* search component here */}
+              <div className="mx-auto flex max-w-72 items-center gap-3 rounded-lg border border-zinc-700 bg-zinc-800 pr-4">
+                <Input
+                  type="text"
+                  className="border-0 bg-zinc-800 text-zinc-50"
+                  placeholder="Search by Username"
+                  onChange={(e) => debouncedSetKeyword(e.target.value)}
+                />
+                <FaSearch className="h-4 w-4 fill-zinc-50" />
+              </div>
             </div>
-          </div>
-          <div className="mx-auto flex max-w-2xl flex-wrap justify-center gap-4">
-            {userQuery.isLoading && <p>Loading...</p>}
-            {userQuery.isError && <p>Error...</p>}
-            {userQuery.data &&
-              userQuery.data.map((user: UserFromRequest) => {
-                return <UserCard user={user} key={user.id} />;
-              })}
-          </div>
-          <div className="my-8 flex justify-center gap-2 p-4">
-            {pagesArr.map((num) => (
-              <button
-                className={`min-h-8 min-w-8 rounded-lg text-mobp font-medium lg:text-deskp lg:font-medium ${page == num ? "bg-violet-400 text-zinc-50" : "bg-zinc-700 text-zinc-50"}`}
-                onClick={() => setPage(num)}
-                key={num}
-              >
-                {num}
-              </button>
-            ))}
+            <div className="mx-auto flex max-w-2xl flex-wrap justify-center gap-4">
+              {userQuery.isLoading && <p>Loading...</p>}
+              {userQuery.isError && <p>Error...</p>}
+              {userQuery.data &&
+                userQuery.data.map((user: UserFromRequest) => {
+                  return <UserCard user={user} key={user.id} />;
+                })}
+            </div>
+            <div className="my-8 flex justify-center gap-2 p-4">
+              {pagesArr.map((num) => (
+                <button
+                  className={`text-mobp lg:text-deskp min-h-8 min-w-8 rounded-lg font-medium lg:font-medium ${page == num ? "bg-violet-400 text-zinc-50" : "bg-zinc-700 text-zinc-50"}`}
+                  onClick={() => setPage(num)}
+                  key={num}
+                >
+                  {num}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </div>
