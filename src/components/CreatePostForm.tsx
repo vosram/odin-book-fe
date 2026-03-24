@@ -106,7 +106,7 @@ function CreatePostForm() {
                   <Textarea
                     {...field}
                     placeholder="Write down your thoughts..."
-                    className="border border-zinc-600 bg-zinc-700 text-mobp text-zinc-200 placeholder:text-zinc-500 lg:text-deskp"
+                    className="text-mobp lg:text-deskp border border-zinc-600 bg-zinc-700 text-zinc-200 placeholder:text-zinc-500"
                   />
                 </FormControl>
                 <FormMessage />

@@ -31,7 +31,7 @@ function UsersPage() {
   return (
     <AuthLayout>
       <div className="min-h-[calc(100vh-72px)] bg-zinc-900">
-        <div className="grid max-w-7xl gap-8 px-4 pt-14 pb-32 lg:grid-cols-7">
+        <div className="mx-auto grid max-w-7xl gap-8 px-4 pt-8 pb-32 lg:grid-cols-7">
           <SidebarNav />
           <div className="lg:col-span-4 lg:col-start-3">
             <div className="mb-6 px-4">

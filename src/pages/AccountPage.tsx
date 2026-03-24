@@ -19,66 +19,68 @@ function AccountPage() {
   return (
     <AuthLayout>
       <div className="min-h-screen bg-zinc-900 px-4 py-10 text-zinc-50">
-        <SidebarNav />
-        <div className="mx-auto flex max-w-xl flex-col gap-6">
-          <Card className="border-0 bg-zinc-800">
-            <CardHeader>
-              <CardTitle>
-                <h1 className="text-zinc-50">Edit Profile Info</h1>
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              {isSuccess && data && <EditProfileForm user={data.user} />}
-              {isLoading && <LoadingMessage message="Loading..." />}
-              {isError && (
-                <ErrorMessage message="There was an error in loading profile data. Please refresh page." />
-              )}
-            </CardContent>
-          </Card>
-          <Card className="border-0 bg-zinc-800">
-            <CardHeader>
-              <CardTitle>
-                <h2 className="text-zinc-50">Change Username</h2>
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              {isSuccess && data && <ChangeUsernameForm user={data.user} />}
-              {isLoading && <LoadingMessage message="Loading..." />}
-              {isError && (
-                <ErrorMessage message="There was an error in loading profile data. Please refresh page." />
-              )}
-            </CardContent>
-          </Card>
-          {isSuccess && data.hasCredentialsAccount && (
+        <div className="mx-auto grid max-w-7xl lg:grid-cols-7 lg:gap-8">
+          <SidebarNav />
+          <div className="mx-auto flex max-w-xl flex-col gap-6 lg:col-span-3 lg:col-start-3">
             <Card className="border-0 bg-zinc-800">
               <CardHeader>
                 <CardTitle>
-                  <h2 className="text-zinc-50">Change Password</h2>
+                  <h1 className="text-zinc-50">Edit Profile Info</h1>
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                {isSuccess && data && <ChangePasswordForm />}
+                {isSuccess && data && <EditProfileForm user={data.user} />}
                 {isLoading && <LoadingMessage message="Loading..." />}
                 {isError && (
                   <ErrorMessage message="There was an error in loading profile data. Please refresh page." />
                 )}
               </CardContent>
             </Card>
-          )}
-          <Card className="mb-28 border-0 bg-zinc-800">
-            <CardHeader>
-              <CardTitle>
-                <h2 className="text-red-600">Danger Zone</h2>
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              {isSuccess && data && <DeleteAccountSection />}
-              {isLoading && <LoadingMessage message="Loading..." />}
-              {isError && (
-                <ErrorMessage message="There was an error in loading profile data. Please refresh page." />
-              )}
-            </CardContent>
-          </Card>
+            <Card className="border-0 bg-zinc-800">
+              <CardHeader>
+                <CardTitle>
+                  <h2 className="text-zinc-50">Change Username</h2>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                {isSuccess && data && <ChangeUsernameForm user={data.user} />}
+                {isLoading && <LoadingMessage message="Loading..." />}
+                {isError && (
+                  <ErrorMessage message="There was an error in loading profile data. Please refresh page." />
+                )}
+              </CardContent>
+            </Card>
+            {isSuccess && data.hasCredentialsAccount && (
+              <Card className="border-0 bg-zinc-800">
+                <CardHeader>
+                  <CardTitle>
+                    <h2 className="text-zinc-50">Change Password</h2>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  {isSuccess && data && <ChangePasswordForm />}
+                  {isLoading && <LoadingMessage message="Loading..." />}
+                  {isError && (
+                    <ErrorMessage message="There was an error in loading profile data. Please refresh page." />
+                  )}
+                </CardContent>
+              </Card>
+            )}
+            <Card className="mb-28 border-0 bg-zinc-800">
+              <CardHeader>
+                <CardTitle>
+                  <h2 className="text-red-600">Danger Zone</h2>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                {isSuccess && data && <DeleteAccountSection />}
+                {isLoading && <LoadingMessage message="Loading..." />}
+                {isError && (
+                  <ErrorMessage message="There was an error in loading profile data. Please refresh page." />
+                )}
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </div>
     </AuthLayout>

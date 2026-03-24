@@ -68,7 +68,7 @@ function Navbar() {
             </div>
             {submenuOpen && (
               <div
-                className="absolute right-0 top-16 flex flex-col justify-center rounded-lg bg-zinc-800 p-4"
+                className="absolute top-16 right-0 z-10 flex flex-col justify-center rounded-lg bg-zinc-800 p-4"
                 onClick={() => setSubmenuOpen(false)}
               >
                 <Button variant="link" asChild className="text-violet-400">

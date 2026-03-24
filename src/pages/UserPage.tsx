@@ -26,14 +26,14 @@ function UserPage() {
   return (
     <AuthLayout>
       <div className="min-h-screen bg-zinc-900 text-zinc-50">
-        <div className="px-4 pb-40 pt-6">
+        <div className="mx-auto grid max-w-7xl px-4 pt-8 pb-40 lg:grid-cols-7">
           <SidebarNav />
-          {isSuccess && user && <UserProfile user={user} />}
-          {isPending && (
-            <LoadingMessage message={`loading ${username}'s profile`} />
-          )}
-          {isError && <ErrorMessage message="Something went wrong" />}
-          <div>
+          <div className="lg:col-span-3 lg:col-start-3">
+            {isSuccess && user && <UserProfile user={user} />}
+            {isPending && (
+              <LoadingMessage message={`loading ${username}'s profile`} />
+            )}
+            {isError && <ErrorMessage message="Something went wrong" />}
             <Outlet />
           </div>
         </div>
